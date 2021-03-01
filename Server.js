@@ -21,6 +21,4 @@ app.get('/', (req, res) => {
 });
 const reqHandlerLoader = require('./view');
 reqHandlerLoader.loadRequestHandlers(app);
-app.listen(port, () => {
-    console.log(`Server is running on port: ${port}`);
-});
+app.listen(process.env.PORT);
