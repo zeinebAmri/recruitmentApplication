@@ -15,6 +15,10 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }
 
 app.use(bodyParser.json());
 app.use(cookieParser());
+//ROUTES
+app.get('/', (req, res) => {
+    res.send(' heroku?');
+});
 const reqHandlerLoader = require('./view');
 reqHandlerLoader.loadRequestHandlers(app);
 app.listen(port, () => {
